@@ -1,3 +1,22 @@
+
+
+/* practice-3 (call, apply - use array, bind - create new func with context which we can use later) */
+/*
+function sayHello(greeting) {
+  console.log(`${greeting}, ${this.name}!`);
+}
+
+const user = {
+  name: "Alice"
+};
+
+const greet = sayHello.bind(user);
+
+greet("Hello");
+
+
+*/
+
 /*practice-2 (context - how to use object for give function context )*/
 /*
 "use strict";
