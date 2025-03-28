@@ -1,4 +1,19 @@
+/* practice-7 (how to output key of object without prototype properties) */
+const animal = { legs: 4 };
+const dog = Object.create(animal);
+dog.name = "Mango";
+dog.sho = "shoto";
+
+console.log(Object.keys(dog)); // ["name"]
+console.log(Object.values(dog)); // ["Mango"]
+
+for(const key of Object.keys(dog)) {
+	console.log(key); // "name"
+}
+
+
 /* practice-6 (prototype) */
+/*
 const parent = {
   name: "Stacey",
   surname: "Moore",
@@ -11,6 +26,9 @@ child.name = "Jason";
 child.age = 27;
 
 console.log(child);
+*/
+
+//////////////////////////////////////////////////////////////////////////
 
 /* practice-5 (use this in bace func and with arrow func)  */
 /*
@@ -29,6 +47,7 @@ showThisContext.call({ username: "Mango" }); // this in showThis: { username: "M
 showThisContext.apply({ username: "Mango" }); // this in showThis: { username: "Mango" }
 */
 
+//////////////////////////////////////////////////////////////////////////
 
 /* practice-4 (use bind like parametr in callback func) */
 /*
@@ -48,7 +67,7 @@ function showBooks(callback) {
 showBooks(library.logBookCount.bind(library));
 */
 
-
+//////////////////////////////////////////////////////////////////////////
 
 /* practice-3 (call, apply - use array, bind - create new func with context which we can use later) */
 /*
@@ -65,7 +84,7 @@ const greet = sayHello.bind(user);
 greet("Hello");
 */
 
-
+//////////////////////////////////////////////////////////////////////////
 
 /*practice-2 (context - how to use object for give function context )*/
 /*
@@ -88,7 +107,7 @@ user.showContext(); // this in showThis: {username: "Poly", showContext: ƒ}
 showThis(); // "this in showThis: undefined"
 */
 
-
+//////////////////////////////////////////////////////////////////////////
 
 /*practice-1 (this)*/
 /*
