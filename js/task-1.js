@@ -1,6 +1,19 @@
+/* practice-6 (prototype) */
+const parent = {
+  name: "Stacey",
+  surname: "Moore",
+  age: 54,
+  heritage: "Irish",
+};
 
-/* use this in bace func and with arrow func  */
+const child = Object.create(parent);
+child.name = "Jason";
+child.age = 27;
 
+console.log(child);
+
+/* practice-5 (use this in bace func and with arrow func)  */
+/*
 const showThis = () => {
   console.log("this in showThis: ", this);
 };
@@ -14,7 +27,7 @@ function showThisContext(){
 
 showThisContext.call({ username: "Mango" }); // this in showThis: { username: "Mango" }
 showThisContext.apply({ username: "Mango" }); // this in showThis: { username: "Mango" }
-
+*/
 
 
 /* practice-4 (use bind like parametr in callback func) */
