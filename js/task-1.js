@@ -1,3 +1,21 @@
+/* practice-4 (use bind like parametr in callback func) */
+/*
+"use strict";
+
+const library = {
+	books: 1923,
+	logBookCount() {
+		console.log(this.books);
+	}
+};
+
+function showBooks(callback) {
+	callback()
+}
+
+showBooks(library.logBookCount.bind(library));
+*/
+
 
 
 /* practice-3 (call, apply - use array, bind - create new func with context which we can use later) */
@@ -13,9 +31,9 @@ const user = {
 const greet = sayHello.bind(user);
 
 greet("Hello");
-
-
 */
+
+
 
 /*practice-2 (context - how to use object for give function context )*/
 /*
@@ -36,8 +54,9 @@ user.showContext(); // this in showThis: {username: "Poly", showContext: ƒ}
 
 // Викликаємо в глобальному контексті
 showThis(); // "this in showThis: undefined"
-
 */
+
+
 
 /*practice-1 (this)*/
 /*
