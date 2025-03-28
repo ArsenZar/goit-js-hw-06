@@ -1,3 +1,22 @@
+
+/* use this in bace func and with arrow func  */
+
+const showThis = () => {
+  console.log("this in showThis: ", this);
+};
+
+showThis.call({ username: "Mango" }); // this in showThis: window
+showThis.apply({ username: "Mango" }); // this in showThis: window
+
+function showThisContext(){
+  console.log("this in showThis: ", this);
+};
+
+showThisContext.call({ username: "Mango" }); // this in showThis: { username: "Mango" }
+showThisContext.apply({ username: "Mango" }); // this in showThis: { username: "Mango" }
+
+
+
 /* practice-4 (use bind like parametr in callback func) */
 /*
 "use strict";
@@ -81,4 +100,5 @@ const user = {
 
 user.showName();
 
- */
+ 
+*/
