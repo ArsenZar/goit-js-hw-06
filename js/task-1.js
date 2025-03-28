@@ -1,4 +1,20 @@
+/* practice-8 (2 level clone prototype) */
+const objC = { c: "objC prop" };
+
+const objB = Object.create(objC);
+objB.b = "objB prop";
+
+const objA = Object.create(objB);
+objA.a = "objA prop";
+
+console.log(objA); // { a: "objA prop", [[Prototype]]: objB }
+
+
+
+
+
 /* practice-7 (how to output key of object without prototype properties) */
+/*
 const animal = { legs: 4 };
 const dog = Object.create(animal);
 dog.name = "Mango";
@@ -10,7 +26,9 @@ console.log(Object.values(dog)); // ["Mango"]
 for(const key of Object.keys(dog)) {
 	console.log(key); // "name"
 }
+*/
 
+//////////////////////////////////////////////////////////////////////////
 
 /* practice-6 (prototype) */
 /*
