@@ -1,4 +1,20 @@
+/* practice-10 (class take object of params) */
+
+class Car {
+  constructor(params){
+    this.brand = params.brand;
+    this.model = params.model;
+    this.price = params.price + "$";
+  }
+}
+
+const firstCar = new Car({brand: "BMW", model: "X5", price: 58900});
+console.log(firstCar);
+
+//////////////////////////////////////////////////////////////////////////
+
 /* practice-9 (create first class) */
+/*
 class Car {
   constructor(brand, model, price){
     this.brand = brand;
@@ -9,7 +25,7 @@ class Car {
 
 const firstCar = new Car("BMW", "X5", 58900);
 console.log(firstCar);
-
+*/
 
 //////////////////////////////////////////////////////////////////////////
 
