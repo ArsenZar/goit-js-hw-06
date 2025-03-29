@@ -1,5 +1,30 @@
-/* practice-10 (class take object of params) */
+/* practice-11 (work with "this" and methods of class) */
 
+class Car {
+  constructor(params){
+    this.brand = params.brand;
+    this.model = params.model;
+    this.price = params.price + "$";
+  }
+    
+  getPrice(){
+    return this.price;
+  }
+
+  changePrice(newPrice){
+    return this.price = newPrice + "$";
+  }
+}
+
+const firstCar = new Car({brand: "BMW", model: "X5", price: 58900});
+console.log(firstCar);
+firstCar.changePrice(55555);
+console.log(firstCar);
+
+//////////////////////////////////////////////////////////////////////////
+
+/* practice-10 (class take object of params) */
+/*
 class Car {
   constructor(params){
     this.brand = params.brand;
@@ -10,6 +35,7 @@ class Car {
 
 const firstCar = new Car({brand: "BMW", model: "X5", price: 58900});
 console.log(firstCar);
+*/
 
 //////////////////////////////////////////////////////////////////////////
 
