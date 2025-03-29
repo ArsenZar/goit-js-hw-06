@@ -1,4 +1,20 @@
+/* practice-9 (create first class) */
+class Car {
+  constructor(brand, model, price){
+    this.brand = brand;
+    this.model = model;
+    this.price = price + "$";
+  }
+}
+
+const firstCar = new Car("BMW", "X5", 58900);
+console.log(firstCar);
+
+
+//////////////////////////////////////////////////////////////////////////
+
 /* practice-8 (2 level clone prototype) */
+/*
 const objC = { c: "objC prop" };
 
 const objB = Object.create(objC);
@@ -8,10 +24,9 @@ const objA = Object.create(objB);
 objA.a = "objA prop";
 
 console.log(objA); // { a: "objA prop", [[Prototype]]: objB }
+*/
 
-
-
-
+//////////////////////////////////////////////////////////////////////////
 
 /* practice-7 (how to output key of object without prototype properties) */
 /*
