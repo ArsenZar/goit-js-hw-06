@@ -1,4 +1,33 @@
+/* practice-16 (extends with static prop) */
+class User {
+  constructor(email) {
+    this.email = email;
+  }
+
+  get email() {
+    return this.email;
+  }
+
+  set email(newEmail) {
+    this.email = newEmail;
+  }
+}
+
+
+class Admin extends User{
+  static role = {
+    BASIC: "basic", 
+    SUPERUSER: "superuser"
+  }
+}
+
+console.log(Admin);
+console.log(User);
+
+//////////////////////////////////////////////////////////////////////////
+
 /* practice-15 (static prop and how we can use and chande them) */
+/*
 class User {
   static roles = {
     admin: "admin",
@@ -31,6 +60,7 @@ const mango = new User({
 console.log(mango.role); // "admin"
 mango.role = User.roles.editor;
 console.log(mango.role); // "editor"
+*/
 
 //////////////////////////////////////////////////////////////////////////
 
