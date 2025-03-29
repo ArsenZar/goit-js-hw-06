@@ -1,5 +1,26 @@
-/* practice-12 (look at propertys of prototype class & how new prototype "mango" use date) */
+/* practice-13 (privet date by #) */
+class User {
+  // Необов'язкове оголошення публічних властивостей
+  name;
+  // Обов'язкове оголошення приватних властивостей
+  #email;
 
+  constructor(params) {
+    this.name = params.name;
+    this.#email = params.email;
+  }
+}
+
+const mango = new User({
+  name: "Mango",
+  email: "mango@mail.com",
+});
+console.log(mango.name); // "Mango"
+console.log(mango.#email); // Виникне помилка, це приватна властивість
+
+
+/* practice-12 (look at propertys of prototype class & how new prototype "mango" use date) */
+/*
 class User {
   constructor(params) {
     this.name = params.name;
@@ -25,6 +46,7 @@ console.log(mango);
 //email: "mango@mail.com"
 //name: "Mango"
 //[[Prototype]]: Object 
+*/
 
 //////////////////////////////////////////////////////////////////////////
 
