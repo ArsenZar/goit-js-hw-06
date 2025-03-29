@@ -1,7 +1,41 @@
+/* practice-15 (static prop and how we can use and chande them) */
+class User {
+  static roles = {
+    admin: "admin",
+    editor: "editor",
+		basic: "basic"
+  };
 
+  #email;
+  #role;
+
+  constructor(params) { 
+    this.#email = params.email; 
+    this.#role = params.role || User.roles.basic; 
+  }
+
+  get role() {
+    return this.#role;
+  }
+
+  set role(newRole) {
+    this.#role = newRole;
+  }
+}
+
+const mango = new User({
+  email: "mango@mail.com",
+  role: User.roles.admin,
+});
+
+console.log(mango.role); // "admin"
+mango.role = User.roles.editor;
+console.log(mango.role); // "editor"
+
+//////////////////////////////////////////////////////////////////////////
 
 /* practice-14 (privet methods) */
-
+/*
 class User {
   name;
   #email;
@@ -43,7 +77,7 @@ console.log(mango.getEmail()); // "new@mail.com"
 
 // Прямий виклик приватного методу ззовні призведе до помилки
 mango.#validateEmail('test'); // Помилка
-
+*/
 
 //////////////////////////////////////////////////////////////////////////
 
