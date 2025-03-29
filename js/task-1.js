@@ -1,4 +1,35 @@
-/* practice-13 (privet date by #) */
+/* practice-13.1 (how to need work with privet data) */
+class User {
+  name;
+  #email;
+
+  constructor(params) {
+    this.name = params.name;
+    this.#email = params.email;
+  }
+
+  getEmail() {
+    return this.#email;
+  }
+
+  changeEmail(newEmail) {
+    this.#email = newEmail;
+  }
+}
+
+const mango = new User({
+  name: "Mango",
+  email: "mango@mail.com",
+});
+
+console.log(mango.getEmail()); // "mango@mail.com"
+mango.changeEmail("mango@supermail.com");
+console.log(mango.getEmail()); // "mango@supermail.com"
+
+//////////////////////////////////////////////////////////////////////////
+
+/* practice-13 (privet date in class by #) */
+/*
 class User {
   // Необов'язкове оголошення публічних властивостей
   name;
@@ -17,7 +48,9 @@ const mango = new User({
 });
 console.log(mango.name); // "Mango"
 console.log(mango.#email); // Виникне помилка, це приватна властивість
+*/
 
+//////////////////////////////////////////////////////////////////////////
 
 /* practice-12 (look at propertys of prototype class & how new prototype "mango" use date) */
 /*
