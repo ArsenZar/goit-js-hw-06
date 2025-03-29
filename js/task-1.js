@@ -1,5 +1,35 @@
-/* practice-11 (work with "this" and methods of class) */
+/* practice-12 (look at propertys of prototype class & how new prototype "mango" use date) */
 
+class User {
+  constructor(params) {
+    this.name = params.name;
+    this.email = params.email;
+  }
+
+  getEmail() {
+    return this.email;
+  }
+
+  changeEmail(newEmail) {
+    this.email = newEmail;
+  }
+}
+
+const mango = new User({ 
+	name: "Mango", 
+	email: "mango@mail.com" 
+});
+console.log(User.prototype); // {getEmail: ƒ, changeEmail: ƒ}
+console.log(mango);
+//User {name: 'Mango', email: 'mango@mail.com'}
+//email: "mango@mail.com"
+//name: "Mango"
+//[[Prototype]]: Object 
+
+//////////////////////////////////////////////////////////////////////////
+
+/* practice-11 (work with "this" and methods of class) */
+/*
 class Car {
   constructor(params){
     this.brand = params.brand;
@@ -20,6 +50,7 @@ const firstCar = new Car({brand: "BMW", model: "X5", price: 58900});
 console.log(firstCar);
 firstCar.changePrice(55555);
 console.log(firstCar);
+*/
 
 //////////////////////////////////////////////////////////////////////////
 
